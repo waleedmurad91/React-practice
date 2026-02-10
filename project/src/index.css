@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.text-stroke {
+    color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke: 1px rgba(0, 255, 200, 0.8);
+}
+
+.gradient-text {
+    color: rgba(0, 0, 0, 0);
+    background: linear-gradient(90deg, rgb(0, 240, 255), rgb(0, 26, 255), rgb(255, 45, 117)) 0px 0px / 200% 200% text;
+    animation: 8s infinite gradient;
+    animation-duration: 8s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: gradient;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
